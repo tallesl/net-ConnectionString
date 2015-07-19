@@ -32,8 +32,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionStringReader.cs" />
+    <Compile Include="Exceptions\ConnectionStringReadingException.cs" />
+    <Compile Include="Exceptions\EmptyConnectionStringException.cs" />
+    <Compile Include="Exceptions\EmptyProviderNameException.cs" />
+    <Compile Include="Exceptions\NoSuchConnectionStringException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
