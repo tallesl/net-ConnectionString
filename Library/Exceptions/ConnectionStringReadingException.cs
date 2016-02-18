@@ -1,9 +1,9 @@
-﻿namespace ConnectionStringReading.Exceptions
+﻿namespace ConnectionStringLibrary.Exceptions
 {
     using System;
 
     /// <summary>
-    /// Something exceptional happened on reading a connection string.
+    /// Something exceptional happened while reading a connection string.
     /// </summary>
     [Serializable]
     public abstract class ConnectionStringReadingException : Exception

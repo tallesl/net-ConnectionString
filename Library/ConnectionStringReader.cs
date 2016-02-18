@@ -1,6 +1,6 @@
-﻿namespace ConnectionStringReading
+﻿namespace ConnectionStringLibrary
 {
-    using ConnectionStringReading.Exceptions;
+    using ConnectionStringLibrary.Exceptions;
     using System;
     using System.Configuration;
 
@@ -22,13 +22,14 @@
         /// <exception cref="EmptyProviderNameException">Found an empty provider name</exception>
         public static ConnectionStringSettings Read(string connectionStringName)
         {
-            if (connectionStringName == null) throw new ArgumentNullException("connectionStringName");
+            if (connectionStringName == null)
+                throw new ArgumentNullException("connectionStringName");
 
             var cs = ConfigurationManager.ConnectionStrings[connectionStringName];
-            if (cs == null) throw new NoSuchConnectionStringException(connectionStringName);
+            if (cs == null)
+                throw new NoSuchConnectionStringException(connectionStringName);
 
             Check(cs);
-
             return cs;
         }
 
@@ -40,8 +41,11 @@
         /// <exception cref="EmptyProviderNameException">Found an empty provider name</exception>
         public static void Check(ConnectionStringSettings cs)
         {
-            if (string.IsNullOrWhiteSpace(cs.ConnectionString)) throw new EmptyConnectionStringException(cs);
-            if (string.IsNullOrWhiteSpace(cs.ProviderName)) throw new EmptyProviderNameException(cs);
+            if (string.IsNullOrWhiteSpace(cs.ConnectionString))
+                throw new EmptyConnectionStringException(cs);
+
+            if (string.IsNullOrWhiteSpace(cs.ProviderName))
+                throw new EmptyProviderNameException(cs);
         }
     }
 }

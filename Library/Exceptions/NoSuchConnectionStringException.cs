@@ -1,4 +1,4 @@
-﻿namespace ConnectionStringReading.Exceptions
+﻿namespace ConnectionStringLibrary.Exceptions
 {
     using System;
 

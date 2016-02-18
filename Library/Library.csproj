@@ -7,8 +7,8 @@
     <ProjectGuid>{544D7831-FC62-4099-AB9E-7852CA732B86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConnectionStringReading</RootNamespace>
-    <AssemblyName>ConnectionStringReader</AssemblyName>
+    <RootNamespace>ConnectionStringLibrary</RootNamespace>
+    <AssemblyName>ConnectionString</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ConnectionStringReader.xmls</DocumentationFile>
+    <DocumentationFile>bin\Release\ConnectionString.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
