@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,10 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionStringReader.cs" />
-    <Compile Include="Exceptions\ConnectionStringReadingException.cs" />
-    <Compile Include="Exceptions\EmptyConnectionStringException.cs" />
-    <Compile Include="Exceptions\EmptyProviderNameException.cs" />
-    <Compile Include="Exceptions\NoSuchConnectionStringException.cs" />
+    <Compile Include="ConnectionStringReadingException.cs" />
+    <Compile Include="EmptyConnectionStringException.cs" />
+    <Compile Include="EmptyProviderNameException.cs" />
+    <Compile Include="NoSuchConnectionStringException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

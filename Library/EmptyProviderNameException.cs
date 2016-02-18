@@ -1,7 +1,8 @@
-﻿namespace ConnectionStringLibrary.Exceptions
+﻿namespace ConnectionStringLibrary
 {
     using System;
     using System.Configuration;
+    using System.Globalization;
 
     /// <summary>
     /// Found an empty provider name.
@@ -10,6 +11,7 @@
     public class EmptyProviderNameException : ConnectionStringReadingException
     {
         internal EmptyProviderNameException(ConnectionStringSettings cs)
-            : base(string.Format("The provider name of the connection string \"{0}\" is empty.", cs.Name)) { }
+            : base(string.Format(CultureInfo.InvariantCulture,
+            "The provider name of the connection string \"{0}\" is empty.", cs.Name)) { }
     }
 }

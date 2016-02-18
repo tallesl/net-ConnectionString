@@ -1,6 +1,5 @@
 ﻿namespace ConnectionStringLibrary
 {
-    using ConnectionStringLibrary.Exceptions;
     using System;
     using System.Configuration;
 
@@ -37,10 +36,14 @@
         /// Checks if the connection string and the data provider are not empty.
         /// </summary>
         /// <param name="cs">Connection string settings to check</param>
+        /// <exception cref="ArgumentNullException">An null ConnectionStringSettings was given</exception>
         /// <exception cref="EmptyConnectionStringException">Found an empty connection string</exception>
         /// <exception cref="EmptyProviderNameException">Found an empty provider name</exception>
         public static void Check(ConnectionStringSettings cs)
         {
+            if (cs == null)
+                throw new ArgumentNullException("cs");
+
             if (string.IsNullOrWhiteSpace(cs.ConnectionString))
                 throw new EmptyConnectionStringException(cs);
 
